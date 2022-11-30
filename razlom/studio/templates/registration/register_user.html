@@ -13,9 +13,9 @@
     <div class="login_text">
         <h2>Регистрация</h2>
     </div>
-<form method="post">
-    {% csrf_token %}
-      <table class="table">
+    <form method="post">
+        {% csrf_token %}
+        <table class="table">
             {% for field in form %}
             <div class="input">
                 {{ field.errors }}
@@ -25,10 +25,13 @@
             </div>
             {% endfor %}
         </table>
-    <p><input type="checkbox" required> Согласие на обработку персональных данных</p>
-    <input type="submit" id="submit" value="Зарегистрироваться">
-    <input type="hidden" name="next" value="next">
-</form>
+        <p><input type="checkbox" required> Согласие на обработку персональных данных</p>
+        <input type="submit" id="submit" value="Зарегистрироваться">
+        <input type="hidden" name="next" value="next">
+        <div class="link">
+            <a href="{% url 'index'  %}">Главная</a>
+        </div>
+    </form>
 </div>
 <footer>
     <p>&copy; 2022 3D Интернет магазин Inc</p>

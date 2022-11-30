@@ -28,6 +28,9 @@
         <input type="file" name="photo_file" id="image" accept="image/*">
         <input type="submit" id="submit" value="Создать">
         <input type="hidden" name="next" value="next">
+                <div class="link">
+            <a href="{% url 'index'  %}">Главная</a>
+        </div>
     </form>
     {% endif %}
     {% if perms.studio.can_mark_returned %}

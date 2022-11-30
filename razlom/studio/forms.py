@@ -60,12 +60,12 @@ class UpdateOrderForm(forms.ModelForm):
         img = self.cleaned_data.get('img')
         if status == 'a' and comment == '':
             errors = {'status': ValidationError(
-                'После изменения статуса на принят в работу нужно добавить комментарий'
+                'Необходимо прокомментировать работу'
             )}
             raise ValidationError(errors)
         elif status == 'c' and img is None:
             errors = {'status': ValidationError(
-                'После изменения статуса на выполнено нужно добавить фото'
+                'Необходимо прикрепить фотографию'
             )}
             raise ValidationError(errors)
         elif status == 'n':

@@ -20,7 +20,7 @@
         <p>У вашего аккаунта нет доступа к этой странице. Продолжать,
             пожалуйста, войдите с учетной записью, которая имеет доступ.</p>
         {% else %}
-        <p>Пожалуйста, войдите, чтобы увидеть эту страницу.</p>
+        <p>Введите ваш логин и пароль.</p>
         {% endif %}
         {% endif %}
     </div>
@@ -30,6 +30,9 @@
         <input type="password" name="password" autocomplete="current-password" placeholder="Пароль" id="id_password" required>
         <input type="submit" id="submit" value="Вход">
         <input type="hidden" name="next" value="{{ next }}">
+                <div class="link">
+            <a href="{% url 'index'  %}">Главная</a>
+        </div>
     </form>
 </div>
 <footer>
